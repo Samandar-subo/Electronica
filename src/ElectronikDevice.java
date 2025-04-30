@@ -5,9 +5,9 @@ public class ElectronikDevice {
     int price;
 
     void displayInfo() {
-        System.out.println("Электронное устройство: ");
+        System.out.println("Электронное устройство. ");
     }
     void Info (){
-        System.out.println("Это всё электронные дивайсы ");
+        System.out.println("Это всё электронные дивайсы .");
     }
 }

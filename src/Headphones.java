@@ -4,7 +4,7 @@ public class Headphones extends ElectronikDevice{
 
     @Override
     void displayInfo() {
-        System.out.println("Это блютуз наушники");
+        System.out.println("Это блютуз наушники.");
     }
     @Override
     void Info(){
@@ -12,9 +12,9 @@ public class Headphones extends ElectronikDevice{
     }
 
     void Information(){
-        System.out.println(name+" "+model+" стоит "+price+" tg");
-        System.out.println("Он исползует "+ chargerWolt+" Wolt при зарядке");
-        System.out.println("он создан в "+Year+" году ");
+        System.out.println(name+" "+model+" стоит "+price+" tg.");
+        System.out.println("Он исползует "+ chargerWolt+" Wolt при зарядке.");
+        System.out.println("он создан в "+Year+" году. ");
     }
 
 }
