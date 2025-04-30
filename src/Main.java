@@ -35,11 +35,11 @@ public class Main {
         ElectronikDevice device =new Phone();
         ElectronikDevice device1= new Headphones();
         ElectronikDevice device2=new SmartWhach();
-
+        System.out.println("Здесь информация про девайсы ");
         device1.displayInfo();
         device2.displayInfo();
         device.displayInfo();
-
+        System.out.println("Что это такое ");
         device2.Info();
         device1.Info();
         device.Info();
