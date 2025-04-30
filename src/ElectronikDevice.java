@@ -4,6 +4,7 @@ public class ElectronikDevice {
     int Year;
     int price;
 
+
     void displayInfo() {
         System.out.println("Электронное устройство. ");
     }

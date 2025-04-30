@@ -4,6 +4,7 @@ public class Phone extends ElectronikDevice {
     String model ;
 
     @Override
+
     void displayInfo() {
         System.out.println("Это айфон.");
     }

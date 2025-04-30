@@ -7,6 +7,7 @@ public class SmartWhach extends ElectronikDevice{
         System.out.println("это умные часы. ");
     }
 
+
     @Override
     void Info() {
         System.out.println("Эти часы из компаний Apple.");

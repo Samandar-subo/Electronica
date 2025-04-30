@@ -6,6 +6,8 @@ public class Main {
         System.out.println("Привет, GitHub!");
         Phone Iphone =new Phone();
 
+
+
         Iphone.price=500000;
         Iphone.chargerWolt= 65;
         Iphone.Year=2024;

@@ -6,6 +6,7 @@ public class Headphones extends ElectronikDevice{
     void displayInfo() {
         System.out.println("Это блютуз наушники.");
     }
+
     @Override
     void Info(){
         System.out.println(5+5);
