@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 
 public class Phone extends ElectronikDevice {
     String model ;
@@ -16,6 +15,5 @@ public class Phone extends ElectronikDevice {
 
     void parametrs(){
         System.out.println(model+" стоит "+price+" tg.");
-        System.out.println("Он исползует "+ chargerWolt+" Wolt при зарядке.");
     }
 }

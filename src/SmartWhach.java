@@ -1,5 +1,5 @@
 public class SmartWhach extends ElectronikDevice{
-    String strapColor;
+    String Manuname ;
     String nameModel;
 
     @Override
@@ -15,8 +15,7 @@ public class SmartWhach extends ElectronikDevice{
 
     void parametr(){
         System.out.println("Название чесов "+nameModel);
-        System.out.println("Он исползует "+ chargerWolt+" Wolt при зарядке.");
         System.out.println("он создан в "+Year+" году .");
-        System.out.println("Ремешок "+strapColor+" цвета .");
+        System.out.println(" Прозвадител  часов "+Manuname+" ");
     }
 }

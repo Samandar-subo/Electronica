@@ -9,12 +9,11 @@ public class Headphones extends ElectronikDevice{
 
     @Override
     void Info(){
-        System.out.println(5+5);
+        System.out.println("Simson");
     }
 
     void Information(){
         System.out.println(name+" "+model+" стоит "+price+" tg.");
-        System.out.println("Он исползует "+ chargerWolt+" Wolt при зарядке.");
         System.out.println("он создан в "+Year+" году. ");
     }
 

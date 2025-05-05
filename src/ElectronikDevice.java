@@ -1,6 +1,5 @@
 public class ElectronikDevice {
     String nameDiv;
-    int chargerWolt;
     int Year;
     int price;
 
