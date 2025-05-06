@@ -1,5 +1,5 @@
 public class Headphones extends ElectronikDevice{
-    String name;
+    String name;// имя произвадителя
     String model;
 
     @Override
@@ -9,7 +9,12 @@ public class Headphones extends ElectronikDevice{
 
     @Override
     void Info(){
-        System.out.println("Simson");
+        System.out.println("этот наушник работает толка через блютуз ");
+    }
+
+    @Override
+    void infoYears(){
+        System.out.println("Эти Наушник в"+(Year+4)+" году можеть быть не пригоден к исползование ");
     }
 
     void Information(){
