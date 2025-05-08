@@ -1,21 +1,11 @@
 public class Laptop  extends  ElectronikDevice{
-    String lapname;
-    String modelLap;
+    String laptopname;
+    String LapModel;
 
-    @Override
-    void displayInfo() {
-        System.out.println("Этот ноутбук называется  ");
-    }
-
-    @Override
-    void infoYears(){
-        System.out.println("Этот Ноутбук в"+(Year+4)+" году можеть быть не пригоден к исползование ");
-    }
-
-
-
-    void par (){
-        System.out.println(lapname+" "+modelLap);
-        System.out.println("Этот ноутбук создан в "+Year+" году и стоит "+price+" тг");
+    void Infomation(){
+        System.out.println("Ноутбук из комапний "+laptopname);
+        System.out.println("Названмие Ноутбука "+LapModel);
+        System.out.println("Ноутбук создан в "+Year+" году ");
+        System.out.println("Ноутбук стоит "+price+" тг ");
     }
 }

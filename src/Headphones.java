@@ -1,25 +1,12 @@
 public class Headphones extends ElectronikDevice{
-    String name;// имя произвадителя
     String model;
+    String name;
 
-    @Override
-    void displayInfo() {
-        System.out.println("Это блютуз наушники.");
-    }
-
-    @Override
-    void Info(){
-        System.out.println("этот наушник работает толка через блютуз ");
-    }
-
-    @Override
-    void infoYears(){
-        System.out.println("Эти Наушник в"+(Year+4)+" году можеть быть не пригоден к исползование ");
-    }
-
-    void Information(){
-        System.out.println(name+" "+model+" стоит "+price+" tg.");
-        System.out.println("он создан в "+Year+" году. ");
+    void Informa(){
+        System.out.println("Наушник из бренда "+name);
+        System.out.println("Модел наушников называется "+model);
+        System.out.println("Наушники созданы в "+Year+" году");
+        System.out.println("Наушник стоит "+price+" тг");
     }
 
 }
