@@ -1,6 +1,16 @@
 public class Headphones extends ElectronikDevice{
-    String model;
-    String name;
+    private String model;
+    private String name;
+    int Yea;
+    int prese;
+
+    public Headphones (String name,String model,int prese,int Yea){
+        this.name=name;
+        this.model=model;
+        price=prese;
+        Year=Yea;
+
+    }
 
     void Informa(){
         System.out.println("Наушник из бренда "+name);
