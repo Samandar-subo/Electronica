@@ -1,5 +1,15 @@
 public class Phone extends ElectronikDevice {
-    String model ;
+     private String model ;
+     private int years;
+     private int prise;
+
+     public Phone(String model,int yers,int prise){
+         this.model=model;
+         price=prise;
+         Year=yers;
+
+     }
+
 
     void Infor(){
         System.out.println("Модел телефона "+model);

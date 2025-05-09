@@ -1,6 +1,15 @@
 public class Laptop  extends  ElectronikDevice{
-    String laptopname;
-    String LapModel;
+    private String laptopname;
+    private String LapModel;
+     int gd;
+     int dengi;
+
+    public Laptop(String laptopname,String LapModel,int gd,int dengi){
+        this.laptopname=laptopname;
+        this.LapModel=LapModel;
+        Year=gd;
+        price=dengi;
+    }
 
     void Infomation(){
         System.out.println("Ноутбук из комапний "+laptopname);
