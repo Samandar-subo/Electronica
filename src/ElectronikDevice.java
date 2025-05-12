@@ -1,9 +1,9 @@
 public class ElectronikDevice {
-    public int Year;
-    public int price;
+    private int Year;
+    private int price;
 
     public void setPrice(int price) {
-        this.price = price;
+            this.price=price;
     }
 
     public int getPrice() {
@@ -17,6 +17,15 @@ public class ElectronikDevice {
     public int getYear() {
         return Year;
     }
+
+    void checkPrice() {
+        if (getPrice() <= 0) {
+            System.out.println("❗ В этом девайсе ошибочная цена");
+        } else {
+            System.out.println("Цена: " + getPrice() + " тг");
+        }
+    }
+
 
     void print(){
         System.out.println();

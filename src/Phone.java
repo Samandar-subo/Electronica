@@ -16,10 +16,13 @@ public class Phone extends ElectronikDevice {
         return model;
     }
 
+
+
     void infor(){
         System.out.println("Модел телефона "+getModel());
         System.out.println("Телефон быль создан "+getYear()+"тг");
         System.out.println("В нашем магазине телфон стоит "+getPrice()+" тг");
+        checkPrice();
     }
 
 }

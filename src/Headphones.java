@@ -31,6 +31,7 @@ public class Headphones extends ElectronikDevice{
         System.out.println("Модел наушников называется "+getModel());
         System.out.println("Наушники созданы в "+getYear()+" году");
         System.out.println("Наушник стоит "+getPrice()+" тг");
+        checkPrice();
     }
 
 }

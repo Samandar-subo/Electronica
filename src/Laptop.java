@@ -30,5 +30,7 @@ public class Laptop  extends  ElectronikDevice{
         System.out.println("Названмие Ноутбука "+getLapModel());
         System.out.println("Ноутбук создан в "+getYear()+" году ");
         System.out.println("Ноутбук стоит "+getPrice()+" тг ");
+        checkPrice();
+
     }
 }
