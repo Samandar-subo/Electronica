@@ -3,9 +3,10 @@ public class Phone extends ElectronikDevice {
 
 
      public Phone(String model,int Year,int price){
-         this.price=price;
+         setPrice(price);
          this.model=model;
-         this.Year=Year;}
+         setYear(Year);
+     }
 
     public void setModel(String model) {
         this.model = model;
@@ -15,10 +16,10 @@ public class Phone extends ElectronikDevice {
         return model;
     }
 
-    void Infor(){
-        System.out.println("Модел телефона "+model);
-        System.out.println("Телефон быль создан "+Year);
-        System.out.println("В нашем магазине телфон стоит "+price+" тг");
+    void infor(){
+        System.out.println("Модел телефона "+getModel());
+        System.out.println("Телефон быль создан "+getYear()+"тг");
+        System.out.println("В нашем магазине телфон стоит "+getPrice()+" тг");
     }
 
 }

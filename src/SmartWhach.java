@@ -2,8 +2,23 @@ public class SmartWhach extends ElectronikDevice{
     private String nameModel;
     private String Color;
 
+    public void setNameModel(String nameModel) {
+        this.nameModel = nameModel;
+    }
 
-    public SmartWhach (String nameModel, String Color,int price,int Year){
+    public void setColor(String color) {
+        Color = color;
+    }
+
+    public String getNameModel() {
+        return nameModel;
+    }
+
+    public String getColor() {
+        return Color;
+    }
+
+    public SmartWhach (String nameModel, String Color, int price, int Year){
         this.price=price;
         this.nameModel=nameModel;
         this.Color=Color;
@@ -11,11 +26,11 @@ public class SmartWhach extends ElectronikDevice{
 
     }
 
-    void Inform(){
-        System.out.println("Эти часы называется "+nameModel);
-        System.out.println("Эти смарт часы созданы в "+Year+" году");
-        System.out.println("В этих часов цвет ремешка "+Color);
-        System.out.println("Эти часы стоит "+price+" тг");
+    void inform(){
+        System.out.println("Эти часы называется "+getNameModel());
+        System.out.println("Эти смарт часы созданы в "+getYear()+" году");
+        System.out.println("В этих часов цвет ремешка "+getColor());
+        System.out.println("Эти часы стоит "+getPrice()+" тг");
     }
 
 }
