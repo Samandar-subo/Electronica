@@ -2,6 +2,13 @@ public class ElectronikDevice {
     public int Year;
     public int price;
 
+    public void setPrice(int price) {
+        this.price = price;
+        if(price<=0){
+            price=0;
+        }
+    }
+
     void Print(){
         System.out.println();
         System.out.println("Добро пожаловат в наш могазин электроники");

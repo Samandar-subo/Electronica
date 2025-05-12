@@ -1,14 +1,13 @@
 public class SmartWhach extends ElectronikDevice{
     private String nameModel;
     private String Color;
-    int yars;
-    int pase;
 
-    public SmartWhach (String nameModel, String Color,int pase,int yars){
+
+    public SmartWhach (String nameModel, String Color,int price,int Year){
+        this.price=price;
         this.nameModel=nameModel;
         this.Color=Color;
-        price=pase;
-        Year=yars;
+        this.Year=Year;
 
     }
 

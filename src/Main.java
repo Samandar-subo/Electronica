@@ -2,31 +2,35 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System. in );
 
         ElectronikDevice div =new ElectronikDevice();
         div.Print();
 
-        String num= scan.nextLine();
+        String num =scan.nextLine();
+
         // Phone
-        Phone Iphone = new Phone("Iphone 14 pro",2022,540000);
+        Phone Iphone = new Phone("Iphone 14 pro",2022,-540000);
         Phone Samsung = new Phone("Samsung S24 Ultra",2023,650000);
         Phone Redmi = new Phone("Redmi not 12",2021,156000);
 
         // Laptop
-        Laptop Asus = new Laptop("Asus","TUF F15",2022,450000);
+        Laptop Asus = new Laptop("Asus","TUF F15",2022,-450000);
         Laptop Hp =new Laptop("Hp","h5",2020,280000);
         Laptop Imac= new Laptop("Mac","m5",2022,50000);
 
         // Smartwatch
-        SmartWhach Hoco =new SmartWhach("Hoco","Red",8000,2022);
+        SmartWhach Hoco =new SmartWhach("Hoco","Red",-8000,2022);
         SmartWhach Apple_watch =new SmartWhach("Apple watch","black",64000,2022);
         SmartWhach Mi_watch = new SmartWhach("Mi watch","green",12000,2021);
 
         //Headphones
-        Headphones Minor = new Headphones("Minor","pro",28000,2023);
+        Headphones Minor = new Headphones("Minor","pro",-28000,2023);
         Headphones Air_pods = new Headphones("Air pods","max 3",110000,2024);
         Headphones Hoco1 =new Headphones("Hoco","pro",8000,2022);
+
+
 
         if (num.equalsIgnoreCase("Phone")) {
             System.out.print("У наc есть телефоны Iphone Samsung Redmi: ");
@@ -62,7 +66,7 @@ public class Main {
                 Hoco.Inform();
             } else if (num1.equalsIgnoreCase("Apple watch")) {
                 Apple_watch.Inform();
-            } else if (num1.equalsIgnoreCase("Mi watch 5")) {
+            } else if (num1.equalsIgnoreCase("Mi watch")) {
                 Mi_watch.Inform();
             }
             else {
@@ -84,6 +88,7 @@ public class Main {
         }else {
             System.out.println(" У нам нету такого девайса ");
         }
+
 
 
 

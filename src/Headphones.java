@@ -1,14 +1,15 @@
+import java.time.Year;
+
 public class Headphones extends ElectronikDevice{
     private String model;
     private String name;
-    int Yea;
-    int prese;
 
-    public Headphones (String name,String model,int prese,int Yea){
+
+    public Headphones (String name,String model,int price,int Year){
+        this.price=price;
         this.name=name;
         this.model=model;
-        price=prese;
-        Year=Yea;
+        this.Year= Year;
 
     }
 
