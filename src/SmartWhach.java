@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class SmartWhach extends ElectronikDevice{
     private String nameModel;
     private String Color;
+    private String x;
 
     public void setNameModel(String nameModel) {
         this.nameModel = nameModel;
@@ -38,7 +39,8 @@ public class SmartWhach extends ElectronikDevice{
 
     @Override
     public void showInfo(){
-        System.out.println("Хотите купить этот Умные часы ?");
+        x = "Хотите купить этот Умные часы ?";
+        System.out.println(x);
         System.out.println("1 — Да\n2 — Посмотреть другое");
         Scanner sc =new Scanner(System.in);
         int choice= sc.nextInt();
