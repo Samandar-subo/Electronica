@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class SmartWhach extends ElectronikDevice{
     private String nameModel;
     private String Color;
@@ -32,6 +34,19 @@ public class SmartWhach extends ElectronikDevice{
         System.out.println("В этих часов цвет ремешка "+getColor());
         System.out.println("Эти часы стоит "+getPrice()+" тг");
         checkPrice();
+    }
+
+    @Override
+    public void showInfo(){
+        System.out.println("Хотите купить этот Умные часы ?");
+        System.out.println("1 — Да\n2 — Посмотреть другое");
+        Scanner sc =new Scanner(System.in);
+        int choice= sc.nextInt();
+        if (choice == 1) {
+            System.out.println("✅ Спасибо за покупку!");
+        } else {
+            System.out.println("🔁 Возвращаемся к выбору.");
+        }
     }
 
 }

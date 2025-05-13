@@ -1,4 +1,4 @@
-public class ElectronikDevice {
+public abstract class ElectronikDevice {
     private int Year;
     private int price;
 
@@ -26,12 +26,9 @@ public class ElectronikDevice {
         }
     }
 
+    public abstract void showInfo();
 
-    void print(){
-        System.out.println();
-        System.out.println("Добро пожаловат в наш могазин электроники");
-        System.out.println("у нас на данный есть эти девайсы Phone, Smart watch, Laptop , Headphones ;");
-        System.out.print("Выберите девавйс которые вам надо:");
-    }
+
+
 
 }

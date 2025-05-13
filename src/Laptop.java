@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Laptop  extends  ElectronikDevice{
     private String laptopname;
     private String LapModel;
@@ -33,4 +35,19 @@ public class Laptop  extends  ElectronikDevice{
         checkPrice();
 
     }
+
+    @Override
+    public void showInfo() {
+        System.out.println("Хотите купить этот Ноутбук ?");
+        System.out.println("1 — Да\n2 — Посмотреть другое");
+        Scanner sc =new Scanner(System.in);
+        int choice= sc.nextInt();
+        if (choice == 1) {
+            System.out.println("✅ Спасибо за покупку!");
+        } else {
+            System.out.println("🔁 Возвращаемся к выбору.");
+        }
+    }
+
+
 }

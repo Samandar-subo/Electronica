@@ -5,8 +5,10 @@ public class Main {
 
         Scanner scan = new Scanner(System. in );
 
-        ElectronikDevice div =new ElectronikDevice();
-        div.print();
+        System.out.println();
+        System.out.println("Добро пожаловат в наш могазин электроники");
+        System.out.println("у нас на данный есть эти девайсы Phone, Smart watch, Laptop , Headphones ;");
+        System.out.print("Выберите девавйс которые вам надо:");
 
         String num =scan.nextLine();
 
@@ -30,16 +32,21 @@ public class Main {
         Headphones Air_pods = new Headphones("Air pods","max 3",110000,2024);
         Headphones Hoco1 =new Headphones("Hoco","pro",8000,2022);
 
+        ElectronikDevice d1 =new Phone("Iphone 14 pro",2023,-540000);
+
 
         if (num.equalsIgnoreCase("Phone")) {
             System.out.print("У наc есть телефоны Iphone Samsung Redmi: ");
             String num0=scan.nextLine();
             if (num0.equalsIgnoreCase("Iphone")) {
                 Iphone.infor();
+                Iphone.showInfo();
             } else if (num0.equalsIgnoreCase("Samsung")) {
                 Samsung.infor();
+                Samsung.showInfo();
             } else if (num0.equalsIgnoreCase("Redmi")) {
                 Redmi.infor();
+                Redmi.showInfo();
             } else {
                 System.out.println("К сожелению у нас нет такого телофона");
             }
@@ -49,10 +56,13 @@ public class Main {
             String num2= scan.nextLine();
             if (num2.equalsIgnoreCase("Asus")){
                 Asus.infomation();
+                Asus.showInfo();
             } else if (num2.equalsIgnoreCase("Hp")) {
                 Hp.infomation();
+                Hp.showInfo();
             } else if (num2.equalsIgnoreCase("iMac")) {
                 Imac.infomation();
+                Imac.showInfo();
             }
             else {
                 System.out.println("К сожелению у нас нет такого Ноутбука");
@@ -63,10 +73,13 @@ public class Main {
             String num1= scan.nextLine();
             if (num1.equalsIgnoreCase("Hoco")){
                 Hoco.inform();
+                Hoco.showInfo();
             } else if (num1.equalsIgnoreCase("Apple watch")) {
                 Apple_watch.inform();
+                Apple_watch.showInfo();
             } else if (num1.equalsIgnoreCase("Mi watch")) {
                 Mi_watch.inform();
+                Mi_watch.showInfo();
             }
             else {
                 System.out.println("К сожелению у нас нет такого Умные часы ");
@@ -76,10 +89,13 @@ public class Main {
             String num3= scan.nextLine();
             if (num3.equalsIgnoreCase("Minor")){
                 Minor.informa();
+                Minor.showInfo();
             } else if (num3.equalsIgnoreCase("Air pods")) {
                 Air_pods.informa();
+                Air_pods.showInfo();
             } else if (num3.equalsIgnoreCase("Hoco")) {
                 Hoco1.informa();
+                Hoco1.showInfo();
             }
             else {
                 System.out.println("У нас нету такого наушника ");
@@ -87,6 +103,10 @@ public class Main {
         }else {
             System.out.println(" У нам нету такого девайса ");
         }
+
+
+
+
 
 
 
