@@ -1,118 +1,86 @@
+import javax.swing.text.StyleContext;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System. in );
+        Scanner scan = new Scanner(System.in);
+        Save sklad = new Save();
 
         System.out.println();
-        System.out.println("Добро пожаловат в наш могазин электроники");
-        System.out.println("у нас на данный есть эти девайсы Phone, Smart watch, Laptop , Headphones ;");
-        System.out.print("Выберите девавйс которые вам надо:");
+        System.out.println("Добро пожаловать в наш магазин электроники");
 
-        String num =scan.nextLine();
+        int mod = 0;
+        while (mod == 0) {
+            System.out.println("Выберите устройства которые вам нужно:\n" +
+                    "1. Телефоны\n" +
+                    "2. Ноутбуки \n" +
+                    "3. Наушники  \n" +
+                    "4. Умные часы ");
+            System.out.print("Ваш выбор: ");
+            int num1 = scan.nextInt();
 
-        // Phone
-        Phone Iphone = new Phone("Iphone 14 pro",2022,-540000);
-        Phone Samsung = new Phone("Samsung S24 Ultra",2023,650000);
-        Phone Redmi = new Phone("Redmi not 12",2021,156000);
-
-        // Laptop
-        Laptop Asus = new Laptop("Asus","TUF F15",2022,-450000);
-        Laptop Hp =new Laptop("Hp","h5",2020,280000);
-        Laptop Imac= new Laptop("Mac","m5",2022,50000);
-
-        // Smartwatch
-        SmartWhach Hoco =new SmartWhach("Hoco","Red",-8000,2022);
-        SmartWhach Apple_watch =new SmartWhach("Apple watch","black",64000,2022);
-        SmartWhach Mi_watch = new SmartWhach("Mi watch","green",12000,2021);
-
-        //Headphones
-        Headphones Minor = new Headphones("Minor","pro",-28000,2023);
-        Headphones Air_pods = new Headphones("Air pods","max 3",110000,2024);
-        Headphones Hoco1 =new Headphones("Hoco","pro",8000,2022);
-
-        ElectronikDevice d1 =new Phone("Iphone 14 pro",2023,-540000);
-
-
-        if (num.equalsIgnoreCase("Phone")) {
-            System.out.print("У наc есть телефоны Iphone Samsung Redmi: ");
-            String num0=scan.nextLine();
-            if (num0.equalsIgnoreCase("Iphone")) {
-                Iphone.infor();
-                Iphone.showInfo();
-            } else if (num0.equalsIgnoreCase("Samsung")) {
-                Samsung.infor();
-                Samsung.showInfo();
-            } else if (num0.equalsIgnoreCase("Redmi")) {
-                Redmi.infor();
-                Redmi.showInfo();
-            } else {
-                System.out.println("К сожелению у нас нет такого телофона");
-            }
-        }
-        else if (num.equalsIgnoreCase("Laptop")) {
-            System.out.print("У наc есть ноутбуки Asus Imac Hp:");
-            String num2= scan.nextLine();
-            if (num2.equalsIgnoreCase("Asus")){
-                Asus.infomation();
-                Asus.showInfo();
-            } else if (num2.equalsIgnoreCase("Hp")) {
-                Hp.infomation();
-                Hp.showInfo();
-            } else if (num2.equalsIgnoreCase("iMac")) {
-                Imac.infomation();
-                Imac.showInfo();
+            if (num1 == 1) {
+                System.out.print("Выберите телефон который вам нужен:");
+                for (int i = 0; i < sklad.phones.size(); i++) {
+                    Phone phone = sklad.phones.get(i);
+                    System.out.println((i + 1) + ". " + phone.getModel());
+                }
+                int choice = scan.nextInt();
+                Phone selected = sklad.phones.get(choice - 1);
+                selected.infor();
+                selected.showInfo();
+            } else if (num1==2) {
+                System.out.println("Выберите ноутбук который вам нужен:");
+                for (int i = 0; i < sklad.laptops.size(); i++) {
+                    Laptop laptop = sklad.laptops.get(i);
+                    System.out.println((i + 1) + ". " + laptop.getLaptopname());
+                }
+                int choice = scan.nextInt();
+                Laptop selected = sklad.laptops.get(choice - 1);
+                selected.infomation();
+                selected.showInfo();
+            } else if (num1 == 3) {
+                System.out.print("Выберите наушники которые вам надо:");
+                for (int i = 0; i < sklad.headphones.size(); i++) {
+                    Headphones headphones = sklad.headphones.get(i);
+                    System.out.println((i + 1) + ". " + headphones.getName());
+                }
+                int choice = scan.nextInt();
+                Headphones selected = sklad.headphones.get(choice - 1);
+                selected.informa();
+                selected.showInfo();
+            } else if (num1==4) {
+                System.out.print("Выберите умные часы которые вам надо:");
+                for (int i=0;i< sklad.smartWhaches.size(); i++ ){
+                    SmartWhach smartWhach = sklad.smartWhaches.get(i);
+                    System.out.println((i+1)+". "+ smartWhach.getNameModel());
+                }
+                int choice = scan.nextInt();
+                SmartWhach selected = sklad.smartWhaches.get(choice - 1);
+                selected.inform();
+                selected.showInfo();
             }
             else {
-                System.out.println("К сожелению у нас нет такого Ноутбука");
+                System.out.println("Такого устройства нету у нас в магазине");
+                continue;
             }
+
+            System.out.println("0. Продолжить покупку");
+            System.out.println("1. Закончить транзакцию");
+
+            int modl = scan.nextInt();
+
+            if (modl == 0) {
+                mod = 0;
+            } else if (modl == 1) {
+                mod = 1;
+            }
+
         }
-        else if (num.equalsIgnoreCase("Smart watch")){
-            System.out.print("У нас есть умные часы Hoco, Apple watch , Mi watch 5 :");
-            String num1= scan.nextLine();
-            if (num1.equalsIgnoreCase("Hoco")){
-                Hoco.inform();
-                Hoco.showInfo();
-            } else if (num1.equalsIgnoreCase("Apple watch")) {
-                Apple_watch.inform();
-                Apple_watch.showInfo();
-            } else if (num1.equalsIgnoreCase("Mi watch")) {
-                Mi_watch.inform();
-                Mi_watch.showInfo();
-            }
-            else {
-                System.out.println("К сожелению у нас нет такого Умные часы ");
-            }
-        } else if (num.equalsIgnoreCase("Headphones")){
-            System.out.print("У нас есть наушники Minor , Air pods , Hoco :");
-            String num3= scan.nextLine();
-            if (num3.equalsIgnoreCase("Minor")){
-                Minor.informa();
-                Minor.showInfo();
-            } else if (num3.equalsIgnoreCase("Air pods")) {
-                Air_pods.informa();
-                Air_pods.showInfo();
-            } else if (num3.equalsIgnoreCase("Hoco")) {
-                Hoco1.informa();
-                Hoco1.showInfo();
-            }
-            else {
-                System.out.println("У нас нету такого наушника ");
-            }
-        }else {
-            System.out.println(" У нам нету такого девайса ");
-        }
-
-
-
-
-
-
-
-
-
 
 
     }
-}
+    }

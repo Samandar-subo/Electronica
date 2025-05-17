@@ -1,49 +1,40 @@
 import java.util.Scanner;
+import java.util.concurrent.CountedCompleter;
 
 public class Laptop  extends  ElectronikDevice{
     private String laptopname;
-    private String LapModel;
 
     public void setLaptopname(String laptopname){
         this.laptopname=laptopname;
-    }
-
-    public void setLapModel(String lapModel) {
-        LapModel = lapModel;
     }
 
     public String getLaptopname() {
         return laptopname;
     }
 
-    public String getLapModel() {
-        return LapModel;
-    }
-
-    public Laptop(String laptopname, String LapModel, int Year, int price){
+    public Laptop(String laptopname, int Year, int price, int count){
         setLaptopname(laptopname);
-        setLapModel(LapModel);
         setPrice(price);
         setYear(Year);
+        setCount(count);
     }
 
     void infomation(){
-        System.out.println("Ноутбук из комапний "+getLaptopname());
-        System.out.println("Названмие Ноутбука "+getLapModel());
+        System.out.println("Ноутбук "+getLaptopname());
         System.out.println("Ноутбук создан в "+getYear()+" году ");
-        System.out.println("Ноутбук стоит "+getPrice()+" тг ");
         checkPrice();
 
     }
 
     @Override
     public void showInfo() {
-        System.out.println("Хотите купить этот Ноутбук ?");
+        System.out.println("Хотите купить этот ноутбук ?");
         System.out.println("1 — Да\n2 — Посмотреть другое");
         Scanner sc =new Scanner(System.in);
         int choice= sc.nextInt();
         if (choice == 1) {
-            System.out.println("✅ Спасибо за покупку!");
+            System.out.println();
+            processPayment();
         } else {
             System.out.println("🔁 Возвращаемся к выбору.");
         }
